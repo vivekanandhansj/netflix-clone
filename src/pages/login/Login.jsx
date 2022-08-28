@@ -1,5 +1,10 @@
 import "./login.scss";
-export default function Login() {   
+  import { useNavigate } from "react-router-dom";
+export default function Login() {
+
+  let navigate = useNavigate();
+    const handleClick = () => {
+       navigate("/", { replace: true });}
   return (
     <>
       <div className="login">
@@ -10,7 +15,7 @@ export default function Login() {
               src="https://www.pinclipart.com/picdir/big/2-23236_transparent-netflix-logo-2018-clipart.png"
               alt=""
             />
-            <button className="loginButton">Sign In</button>
+            <button className="loginButton" onClick={handleClick}>Sign In</button>
           </div>
         </div>
         <div className="container">
